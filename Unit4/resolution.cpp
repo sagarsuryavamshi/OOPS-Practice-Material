@@ -17,7 +17,7 @@ class B: public A{
             cout<<"Class B constructor called!"<<endl ;
         }
 
-        void Display() override{
+        void Display() override{       // overriding the Display function of class A
             cout<<"Display B"<<endl ;
         }
 };
@@ -56,7 +56,7 @@ int main(){
     //resolution using scope
     // d.B::Display() ;
     // d.C::Display() ;
-    d.A::Display() ;
+    d.A::Display() ; //       resolving the Display function of class A
       
     //resolution in class itself
     E e ;
