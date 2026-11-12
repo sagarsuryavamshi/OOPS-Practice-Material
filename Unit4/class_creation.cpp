@@ -19,9 +19,9 @@ class Student{
         }
 };
 class StudentManager{
-    Student *students ;
-    int num_students ;
+    Student *s = nullptr ;
     public:
         StudentManager(int n){
-            n
+            s = newStudent[5] ;
+            
         }
