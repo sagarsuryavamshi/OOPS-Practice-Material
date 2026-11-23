@@ -13,13 +13,17 @@ public:
 };
 class Car : public Vehicle{ 
 public:
+    // Constructor for Car
+    Car(){
+        cout << "Car OBJECT is being created..." << endl;
+    }
     virtual void Enginestarts() =0; // Pure virtual function for starting the engine, making Car an abstract class as well
     void start() override{ //Override the start function for car
         cout << "Car is starting..." << endl;
     }
     void stop(){ // if ovverride is not used, it will still override the base class function, but using override is a good practice to catch errors at compile time.
         cout << "Car is stopping..." << endl;
-    }
+    } 
 };
 class Ford : public Car{ // Derived class Ford from Car
 public:
@@ -45,15 +49,15 @@ public:
 };
 int main(){
 // We cannot create an object of the abstract class Vehicle, but we can create pointers of type Vehicle and point them to derived class objects.
-    Vehicle* v1 = new Car(); // Create a Car object
+    Ford ford; //Create a concrete Ford object on the stack
+    Vehicle* v1 = &ford;
     v1->start(); // Call start() on Car
     v1->stop(); // Call stop() on Car
-    delete v1; // Clean up
 
-    Vehicle* v2 = new Bike(); // Create a Bike object
+    Bike bike; // Create a Bike object on the stack
+    Vehicle* v2 = &bike;
     v2->start(); // Call start() on Bike
     v2->stop(); // Call stop() on Bike
-    delete v2; // Clean up
     return 0;
 }
 //  pure virtual functions need to implemented in the derived classes, otherwise the derived class will also be considered abstract and cannot be instantiated.
