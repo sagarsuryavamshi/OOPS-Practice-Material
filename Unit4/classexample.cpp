@@ -9,9 +9,9 @@ class ComplexNum{
     ComplexNum(int r,int i): real(r),imag(i) {
         cout << "Complex number created: " << endl ;
     }
-    ComplexNum operator+(const ComplexNum &other)const{
+    ComplexNum operator+(const ComplexNum &other)const{ // Overloading the + operator
         ComplexNum c(0,0) ;
-        c.real = real + other.real ;
+        c.real = real + other.real ; // Adding the real parts
         c.imag = imag + other.imag ;
         return c ;
     }

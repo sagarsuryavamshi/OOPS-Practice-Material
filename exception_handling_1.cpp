@@ -23,3 +23,5 @@ int main(){
         cout << "Caught genealised error" << endl ;
     }
 }
+// which concept is used in exception handling?
+// The concept used in exception handling is the try-catch mechanism, which allows you to handle exceptions that may occur during program execution. It involves wrapping potentially error-prone code in a try block and catching specific exceptions in catch blocks to handle them appropriately.

@@ -44,7 +44,6 @@ int main(){
     }
     catch(ArithmeticException *e){ // Catching ArithmeticException //why are we using pointer here? because we are throwing a new object of ArithmeticException, so we need to catch it as a pointer.
         e->print();
-        delete e; // Don't forget to delete the dynamically allocated object
     }
 }
 // which is the most import concept in exception handling? The most important concept in exception handling is to catch exceptions properly and handle them gracefully, ensuring that the program can recover or terminate safely without crashing.
